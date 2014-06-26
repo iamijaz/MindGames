@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace BabyProject
+namespace BabyProject.TDD
 {
     internal class ShoppingCart
     {

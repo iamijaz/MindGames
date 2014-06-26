@@ -1,4 +1,4 @@
-﻿namespace BabyProject
+﻿namespace BabyProject.TDD
 {
     internal class Item
     {
