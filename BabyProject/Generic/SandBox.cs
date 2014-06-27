@@ -23,8 +23,8 @@ namespace BabyProject.Generic
 
 
             // without lambda
-            var val3 = Get("EurlAxdRedirect1", () => "haha");
-            var val4 = Get("EurlAxdRedirect2", () => 420);
+            var val3 = Get("EurlAxdRedirect1", "haha");
+            var val4 = Get("EurlAxdRedirect2", 420);
 
             Assert.IsTrue(val3 == "haha");
             Assert.IsTrue(val4 == 420);
