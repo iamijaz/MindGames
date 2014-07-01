@@ -50,10 +50,10 @@
   <ItemGroup>
     <Compile Include="AnonymousMethods\Play.cs" />
     <Compile Include="Generic\SandBox.cs" />
-    <Compile Include="NInject\IRadiusService.cs" />
-    <Compile Include="NInject\ProgramNinject.cs" />
-    <Compile Include="NInject\ServiceLocator.cs" />
-    <Compile Include="NInject\UnprocessedPayment.cs" />
+    <Compile Include="NInject\AutoWireUp\IRadiusService.cs" />
+    <Compile Include="NInject\AutoWireUp\ProgramNinject.cs" />
+    <Compile Include="NInject\AutoWireUp\ServiceLocator.cs" />
+    <Compile Include="NInject\AutoWireUp\UnprocessedPayment.cs" />
     <Compile Include="TDD\ShoppinCartTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TDD\ShoppingCart.cs" />
