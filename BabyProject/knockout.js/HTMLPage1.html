@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.0.0.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="JavaScript1.js"></script>
+</head>
+<body>
+    name:
+    <input type="text" data-bind="value: name" />
+    <p>
+        Hello,<span data-bind="text: name"></span>
+
+    </p>
+    <button data-bind="click: changeName">change name</button>
+</body>
+</html>
