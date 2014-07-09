@@ -10,9 +10,10 @@
 </head>
 <body>
     name:
-    <input type="text" data-bind="value: name" />
+    <input type="text" data-bind="value: name,valueUpdate:'afterkeydown'" />
+    <input type="checkbox" data-bind="checked:nameVisible"/>
     <p>
-        Hello,<span data-bind="text: name"></span>
+        Hello,<span data-bind="text: name,visible:nameVisible"></span>
 
     </p>
     <button data-bind="click: changeName">change name</button>
