@@ -6,6 +6,6 @@
              this.name="steve";
          }
      };     
-     ko.applyBindings(viewModel);     
+     ko.applyBindings(viewModel);  
  }
 );
