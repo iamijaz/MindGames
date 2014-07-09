@@ -16,27 +16,12 @@ namespace BabyProject.NInject.AutoWireUp
             Bind<IRadiusService>().To<DeadRadiusService>().WhenAnyAncestorMatches(IsShapeUser<ShapeUser2>);            
         }
 
-        private bool IsShapeUser<T>(IContext context)
+        private static bool IsShapeUser<T>(IContext context)
         {
             var request = context.Request.ParentRequest;
             while (request != null)
             {
                 if (request.Service == typeof(T))
-                {
-                    return true;
-                }
-                request = request.ParentRequest;
-            }
-
-            return false;
-        }
-
-        private bool IsShapeUser2(IContext context)
-        {
-            var request = context.Request.ParentRequest;
-            while (request != null)
-            {
-                if (request.Service == typeof(ShapeUser2))
                 {
                     return true;
                 }
