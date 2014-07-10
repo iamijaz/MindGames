@@ -21,10 +21,25 @@
             $(
                 function() {
 
+                    /*
                     var data = [
                         { Id: 1, Name: "Ball handling" },
                         { Id: 2, Name: "Passing" }
                     ];
+                    */
+
+                    var data = [
+                        new tagItem(1, "item1"),
+                        new tagItem(1, "item2")
+                    ];
+
+                    function tagItem(id,name) {
+                        return {
+                            Id: ko.observable(id),
+                            Name: ko.observable(name)
+                        };
+                    }
+
 
                     var viewModel =
                     {
