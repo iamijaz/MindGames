@@ -5,10 +5,12 @@
         <meta charset="utf-8" />
         <title></title>
         
-        <script src="http://knockoutjs.com/downloads/knockout-2.2.1.debug.js"></script>
-        <script src="https://rawgit.com/SteveSanderson/knockout.mapping/master/build/output/knockout.mapping-latest.debug.js"></script>
+        
+        
         <script src="../Scripts/jquery-2.1.1.min.js"></script>
-        <script src="../Scripts/jQuery.tmpl.js"></script>
+        <script src="../Scripts/knockout-3.1.0.js"></script>
+        <script src="../Scripts/jquery-ui-1.10.4.min.js"></script>
+        
         <!--better way to reference?-->
         <!--
             couldn't get this thing working unfortunately 
@@ -17,7 +19,7 @@
         <script>
 
             $(
-                function () {
+                function() {
 
                     var data = [
                         { Id: 1, Name: "Ball handling" },
@@ -29,29 +31,42 @@
                         // data                        
                         tags: ko.observableArray(data),
                         tagToAdd: ko.observable(""),
+                        selectedTag: ko.observable(null),
 
                         // behaviours
 
-                        addTag: function () {
+                        addTag: function() {
                             this.tags.push({ Name: this.tagToAdd() });
                             this.tagToAdd("");
+                        },
+
+                        selectTag: function() {
+                            viewModel.selectedTag(this);
                         }
                     };
 
 
-                    $(document).on("click", ".delete-me", function () {
+                    $(document).on("click", ".delete-me", function() {
                         var itemToRemove = ko.dataFor(this);
                         viewModel.tags.remove(itemToRemove);
                     });
 
+
+  
+                    $(document).on("click", ".edit-me", function () {
+                        $("#tagBox").dialog({
+                            buttons: {
+                                Save: function () { $(this).dialog("close"); },
+                                Cancel: function () { $(this).dialog("close"); }
+                            }
+                        });
+                    });
+
+
                     ko.applyBindings(viewModel);
                 }
             );
-
-
-        </script>
-
-    
+        </script>    
     </head>
     <body>
         <br />
@@ -60,14 +75,18 @@
         <button data-bind="click: addTag">Add more</button>        
         <input type="text" data-bind="value: tagToAdd" />
         <ul data-bind="foreach: tags">                
-            <li>
+            <li data-bind="click: $root.selectTag">
                 <span data-bind="text: Name" ></span>
                 <div>
-                    <a>Edit</a>
+                    <a href="#" class="edit-me" >edit</a>
                     <a href="#" class="delete-me" >Delete</a>
                 </div>
             </li>                
         </ul>
+        <div id="tagBox" data-bind="with: selectedTag" >
+            Tag Name:
+            <input type="text" data-bind="value:Name"/>
+        </div>        
         <br />
         <br />
         JQuery basedTemplate
@@ -97,3 +116,4 @@
         </script>
     </body>     
 </html>
+
