@@ -26,7 +26,7 @@
 
                     var viewModel =
                     {
-                        // data
+                        // data                        
                         tags: ko.observableArray(data),
                         tagToAdd: ko.observable(""),
 
@@ -34,12 +34,10 @@
 
                         addTag: function () {
                             this.tags.push({ Name: this.tagToAdd() });
+                            this.tagToAdd("");
                         }
                     };
                     ko.applyBindings(viewModel);
-
-
-
                 }
             );
 
@@ -48,13 +46,30 @@
     
     </head>
     <body>
-    JQuery Template
         <br />
-    <div class="test" data-bind="template: 'tagsTempl'"></div>
+        control flow template [Non Jquery purely KOjs] Note:There is an alternative comments based syntax as well       
+        <br/>
+        <button data-bind="click: addTag">Add more</button>
+        <input type="text" data-bind="value: tagToAdd" />
+        <ul data-bind="foreach: tags">                
+                <li>
+                    <span data-bind="text: Name" ></span>
+                    <div>
+                        <a>Edit</a>
+                        <a>Delete</a>
+                    </div>
+                </li>                
+            </ul>
 
-    <script id="tagsTempl" type="text/html">
-        <ul>
-            {{each tags}}
+        <br />
+        <br />
+        JQuery basedTemplate
+        <br />
+        <div data-bind="template: 'tagsTempl'"></div>
+
+        <script id="tagsTempl" type="text/html">
+            <ul>
+                {{each tags}}
                 <li>
                     <span>${Name}</span>
                     <div>
@@ -62,16 +77,16 @@
                         <a>Delete</a>
                     </div>
                 </li>
+                {{/each}}
+            </ul>
+        </script>
+
+
+        <ul data-bind="template: 'main'"></ul>
+        <script id="main" type="text/html">
+            {{each tags}}
+            <li><span>${Id}</span> - <span>${Name}</span></li>
             {{/each}}
-        </ul>
-    </script>
-
-
-    <ul data-bind="template: 'main'"></ul>
-    <script id="main" type="text/html">
-        {{each tags}}
-        <li><span>${Id}</span> - <span>${Name}</span></li>
-        {{/each}}
-    </script>
-        </body>     
+        </script>
+    </body>     
 </html>
