@@ -37,9 +37,17 @@
                             this.tagToAdd("");
                         }
                     };
+
+
+                    $(document).on("click", ".delete-me", function () {
+                        var itemToRemove = ko.dataFor(this);
+                        viewModel.tags.remove(itemToRemove);
+                    });
+
                     ko.applyBindings(viewModel);
                 }
             );
+
 
         </script>
 
@@ -49,18 +57,17 @@
         <br />
         control flow template [Non Jquery purely KOjs] Note:There is an alternative comments based syntax as well       
         <br/>
-        <button data-bind="click: addTag">Add more</button>
+        <button data-bind="click: addTag">Add more</button>        
         <input type="text" data-bind="value: tagToAdd" />
         <ul data-bind="foreach: tags">                
-                <li>
-                    <span data-bind="text: Name" ></span>
-                    <div>
-                        <a>Edit</a>
-                        <a>Delete</a>
-                    </div>
-                </li>                
-            </ul>
-
+            <li>
+                <span data-bind="text: Name" ></span>
+                <div>
+                    <a>Edit</a>
+                    <a href="#" class="delete-me" >Delete</a>
+                </div>
+            </li>                
+        </ul>
         <br />
         <br />
         JQuery basedTemplate
