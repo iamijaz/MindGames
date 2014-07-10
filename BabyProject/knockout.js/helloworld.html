@@ -34,36 +34,78 @@
         There are three types of observable    
     </p>
     <ol>
-        <li>Observables<ol>
+        <li>Observables(3 types)<ol>
             <li>This regular one the first hello world demo</li>
-            </ol>
-        </li>
-        <li>Collection Observables<ol>
-            <li>Detect changes to the collections</li>
-            <li>Use knockout array method(Although you could use the other JS array methods but prefer knockout because of following reasons <ol>
-                <li>Cross browser</li>
-                <li>Dependency Tracking</li>
-                <li>Clean syntax</li>
-                <li>Array Methods<ol>
-                    <li>List.IndexOf</li>
-                    <li>List.slice</li>
-                    <li>List.push</li>
-                    <li>List.unshit</li>
-                    <li>list.shift</li>
-                    <li>list.revers</li>
-                    <li>list.sort</li>
-                    <li>.list.remove</li>
-                    <li>list.revmoveAll</li>
+            <li>Collection Observables<ol>
+                <li>Detect changes to the collections</li>
+                <li>Use knockout array method(Although you could use the other JS array methods but prefer knockout because of following reasons 
+                    <ol>
+                        <li>Cross browser</li>
+                        <li>Dependency Tracking</li>
+                        <li>Clean syntax</li>
+                        <li>Array Methods<ol>
+                            <li>List.IndexOf</li>
+                            <li>List.slice</li>
+                            <li>List.push</li>
+                            <li>List.unshit</li>
+                            <li>list.shift</li>
+                            <li>list.revers</li>
+                            <li>list.sort</li>
+                            <li>.list.remove</li>
+                            <li>list.revmoveAll</li>
+                            </ol>
+                        </li>
                     </ol>
                 </li>
                 </ol>
             </li>
+            <li>Dependent observable<ol>
+                <li>To manage the this pointer</li>
+                </ol>
+            </li>
             </ol>
         </li>
-        <li>Dependent observable<ol>
-            <li>To manage the this pointer</li>
+        <li>Built in Bindings(4 types)<ol>
+            <li>Text and appearance<ol>
+                <li>Visible:Toggle visibility</li>
+                <li>Text: </li>
+                <li>html: raw html of DOM element</li>
+                <li>css:</li>
+                <li>style:Raw style attribute</li>
+                <li>attr: Anny arbitrary attribute</li>
+                </ol>
+            </li>
+            <li>Forms<ol>
+                <li>click</li>
+                <li>event</li>
+                <li>submit</li>
+                <li>enable</li>
+                <li>disable</li>
+                <li>value</li>
+                <li>checked</li>
+                <li>options</li>
+                <li>selectedoptions</li>
+                <li>uniqueName</li>
+                </ol>
+            </li>
+            <li>ControlFlow (type of template binding) <ol>
+                <li>If</li>
+                <li>IfNot</li>
+                <li>Foreach</li>
+                <li>with</li>
+                </ol>
+            </li>
+            <li>Templates<ol>
+                <li>JavaScript templates (not recommnded)</li>
+                <li>Containerless control flow (anonymous)</li>
+                </ol>
+            </li>
             </ol>
         </li>
+        <li>CustomBindings</li>
+        <li>Ko Utilities</li>
+        <li>Data Features</li>
+        <li></li>
     </ol>
     <br />name:
                 <input type="text" data-bind="value: name, valueUpdate: 'afterkeydown'" />

@@ -64,12 +64,15 @@
     <None Include="Scripts\jquery-2.1.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="knockout.js\masterTemplates.html" />
     <Content Include="knockout.js\obsCollections.html" />
     <Content Include="knockout.js\helloworld.html" />
     <Content Include="knockout.js\JavaScript1.js" />
     <Content Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\jQuery.tmpl.js" />
+    <Content Include="Scripts\jQuery.tmpl.min.js" />
     <Content Include="Scripts\knockout-3.1.0.debug.js" />
     <Content Include="Scripts\knockout-3.1.0.js" />
   </ItemGroup>

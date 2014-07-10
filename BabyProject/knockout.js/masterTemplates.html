@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        
+        <script src="http://knockoutjs.com/downloads/knockout-2.2.1.debug.js"></script>
+        <script src="https://rawgit.com/SteveSanderson/knockout.mapping/master/build/output/knockout.mapping-latest.debug.js"></script>
+        <script src="../Scripts/jquery-2.1.1.min.js"></script>
+        <script src="../Scripts/jQuery.tmpl.js"></script>
+        <!--better way to reference?-->
+        <!--
+            couldn't get this thing working unfortunately 
+            it works on http://jsfiddle.net/rniemeyer/rpMsM/
+            -->
+        <script>
+
+            $(
+                function () {
+
+                    var data = [
+                        { Id: 1, Name: "Ball handling" },
+                        { Id: 2, Name: "Passing" }
+                    ];
+
+                    var viewModel =
+                    {
+                        // data
+                        tags: ko.observableArray(data),
+                        tagToAdd: ko.observable(""),
+
+                        // behaviours
+
+                        addTag: function () {
+                            this.tags.push({ Name: this.tagToAdd() });
+                        }
+                    };
+                    ko.applyBindings(viewModel);
+
+
+
+                }
+            );
+
+        </script>
+
+    
+    </head>
+    <body>
+    JQuery Template
+        <br />
+    <div class="test" data-bind="template: 'tagsTempl'"></div>
+
+    <script id="tagsTempl" type="text/html">
+        <ul>
+            {{each tags}}
+                <li>
+                    <span>${Name}</span>
+                    <div>
+                        <a>Edit</a>
+                        <a>Delete</a>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    </script>
+
+
+    <ul data-bind="template: 'main'"></ul>
+    <script id="main" type="text/html">
+        {{each tags}}
+        <li><span>${Id}</span> - <span>${Name}</span></li>
+        {{/each}}
+    </script>
+        </body>     
+</html>
