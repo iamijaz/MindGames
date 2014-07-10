@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../Scripts/knockout-3.1.0.js"></script>
+    <script src="../Scripts/jquery-2.1.1.min.js"></script>
+    <script src="JavaScript1.js"></script>
+    <!--better way to reference?-->    
+    
+           <script type="text/javascript">
+
+ $(
+     function () {
+         var data = [{ name: "Bob" }, { name: "Joe" }];
+         var viewModel = {
+             list: ko.observableArray(data),
+             addItem: function () { this.list.push({ name: "ijaz" }); },
+             removeItem: function () { this.list.pop(); }
+     };
+
+         ko.applyBindings(viewModel);
+     }
+ );
+ 
+
+        </script>
+</head>
+    <body>
+        
+        JS console window helped to pin point the problem<br/>
+        <button data-bind="click: addItem" >Add</button>       
+        <button data-bind="click: removeItem" >Remove</button>
+    
+        <ul data-bind="template: { name: 'listTemp', foreach: list }"></ul>
+        
+        <script id="listTemp" type="text/html">
+            <li data-bind="text: name" ></li>
+        </script>
+                
+    </body>
+</html>
