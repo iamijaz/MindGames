@@ -1,0 +1,31 @@
+﻿@model MVCValidation.Controllers.PaymentModel
+
+@{
+    ViewBag.Title = "title";
+}
+    <h2>Pay here</h2>
+@using (Html.BeginForm("Create", "Payment"))
+{
+    <fieldset>
+    
+        
+        <legend>
+            My payment
+        </legend>
+
+            @Html.LabelFor(x => x.Name)
+            @Html.TextBoxFor(x => x.Name)
+            
+        
+
+            @Html.LabelFor(x => x.Date)
+            @Html.TextBoxFor(x => x.Date)
+            
+
+            @Html.LabelFor(x => x.CreditCardNumber)
+            @Html.TextBoxFor(x => x.CreditCardNumber)
+
+            <input type="submit" value="Post" />
+        
+    </fieldset>
+}
