@@ -126,6 +126,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="knockout.js\AmExCards.html" />
     <Content Include="knockout.js\masterTemplates.html" />
     <Content Include="knockout.js\obsCollections.html" />
     <Content Include="knockout.js\helloworld.html" />
