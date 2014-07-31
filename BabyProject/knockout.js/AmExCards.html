@@ -41,7 +41,7 @@
                         }
                     },
                     DoesAmexNeedsToBeAdded: function () {
-                        return this.AvailableCardTypes().indexOf(amExCard < 0)
+                        return ko.utils.arrayFirst(this.AvailableCardTypes(), function (item) { return item.CardTypeId == 1; }) == null
                             && this.IsUkCharity
                             && this.IsFeatureWallEnabled;
                     },
