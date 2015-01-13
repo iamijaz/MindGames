@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebKits", "WebKits", "{C87C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCValidation", "MVCValidation\MVCValidation.csproj", "{B3BBF089-4C53-411F-AC4A-24F4000A978D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refactoring", "Refactoring\Refactoring.csproj", "{DFF485D9-3E17-4190-B401-6AF516CCD3A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,10 @@ Global
 		{B3BBF089-4C53-411F-AC4A-24F4000A978D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3BBF089-4C53-411F-AC4A-24F4000A978D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3BBF089-4C53-411F-AC4A-24F4000A978D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFF485D9-3E17-4190-B401-6AF516CCD3A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFF485D9-3E17-4190-B401-6AF516CCD3A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFF485D9-3E17-4190-B401-6AF516CCD3A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFF485D9-3E17-4190-B401-6AF516CCD3A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
