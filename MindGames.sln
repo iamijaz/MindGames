@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refactoring", "Refactoring\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PollySpike", "PollySpike\PollySpike.csproj", "{7B35576C-761A-4CC8-89EB-A2EA21903C0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuartzSpike", "QuartzSpike\QuartzSpike.csproj", "{83FC08BA-D172-4A55-B445-FA52543CFD06}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{7B35576C-761A-4CC8-89EB-A2EA21903C0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B35576C-761A-4CC8-89EB-A2EA21903C0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B35576C-761A-4CC8-89EB-A2EA21903C0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83FC08BA-D172-4A55-B445-FA52543CFD06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83FC08BA-D172-4A55-B445-FA52543CFD06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83FC08BA-D172-4A55-B445-FA52543CFD06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83FC08BA-D172-4A55-B445-FA52543CFD06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
