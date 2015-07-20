@@ -30,7 +30,7 @@
                     IsFeatureWallEnabled:true,
                     AvailableCardTypesOnSelectedCurrencyChanged: function() {
 
-                        if (this.SelectedCurrency() == 'GBP') {
+                        if (this.SelectedCurrency() === "GBP") {
                             if (this.DoesAmexNeedsToBeAdded()) {
                                 this.AvailableCardTypes().push(amExCard);
                             }
@@ -50,7 +50,7 @@
 
                 function sortCardsByName(left, right)
                 {
-                     return left.Name == right.Name ? 0 : (left.Name < right.Name ? -1 : 1);
+                     return left.Name === right.Name ? 0 : (left.Name < right.Name ? -1 : 1);
                 }
 
                 ko.applyBindings(viewModel);
@@ -64,7 +64,7 @@
     <div class="amount">
         <div class="currency-and-amount">
             <div class="styled-select-small">
-                <label for='MessageAndAmount_CurrencyCode' class='ui-hidden-accessible'>Currency</label>
+                <label for="MessageAndAmount_CurrencyCode" class="ui-hidden-accessible">Currency</label>
                 <select data-bind="value: SelectedCurrency" data-val="true" data-val-required="The Currency field is required." id="MessageAndAmount_CurrencyCode" name="MessageAndAmount.CurrencyCode">
                     <option selected="selected" value="GBP">GBP</option>
                     <option value="USD">USD</option>
@@ -78,12 +78,10 @@
             </div>
         </div>
     </div>
-    <div class='fieldset-wrapper'>
-        <fieldset id='Payment-fieldset' class='PaymentMethod main-page-fieldset' data-bind=''>
-            <legend class='ui-hidden-accessible'>Payment details</legend>            
+    <div class="fieldset-wrapper">
+        <fieldset id="Payment-fieldset" class="PaymentMethod main-page-fieldset" data-bind="">
+            <legend class="ui-hidden-accessible">Payment details</legend>            
             <h2>Payment methods</h2>
-
-
             <div id="credit-card-fields" >
                 <div class="payment-type-wrap">
                     <div class="styled-select-medium">
@@ -93,11 +91,8 @@
                     </div>
                 </div>
                 <span class="field-validation-valid" data-valmsg-for="Payment.CardNumber" data-valmsg-replace="true"></span>
-
             </div>
-
         </fieldset>
     </div>
-
 </body>
 </html>
